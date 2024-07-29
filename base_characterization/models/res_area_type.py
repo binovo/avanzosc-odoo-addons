@@ -14,10 +14,9 @@ class ResAreaType(models.Model):
     description = fields.Text(string='Description')
     area_ids = fields.Many2many(
         string="Areas", comodel_name="res.area",
-        relation="rel_area_area_type", columm1="res_area_type_id",
-        columm2='res_area_id', copy=False)
+        relation="rel_area_area_type", column1="res_area_type_id",
+        column2='res_area_id', copy=False)
 
-    @api.multi
     def name_get(self):
         """ name_get() -> [(id, name), ...]
 
