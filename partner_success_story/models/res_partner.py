@@ -12,14 +12,12 @@ class ResPartner(models.Model):
     success_story_count = fields.Integer(
         string='# Success Stories', compute='_compute_success_story_count')
 
-    @api.multi
     def _compute_success_story_count(self):
         story_model = self.env['res.partner.success_story']
         for partner in self:
             partner.success_story_count = story_model.search_count([
                 ('partner_id', '=', partner.id)])
 
-    @api.multi
     def button_open_success_stories(self):
         self.ensure_one()
         action = self.env.ref(

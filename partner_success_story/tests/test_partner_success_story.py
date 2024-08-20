@@ -4,7 +4,7 @@
 from odoo.tests import common
 
 
-class TestPartnerSuccessStory(common.SavepointCase):
+class TestPartnerSuccessStory(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super(TestPartnerSuccessStory, cls).setUpClass()
@@ -17,7 +17,7 @@ class TestPartnerSuccessStory(common.SavepointCase):
         })
 
     def test_partner_success_story(self):
-        self.assertEquals(self.partner.success_story_count, 1)
+        self.assertEqual(self.partner.success_story_count, 1)
         action_dict = self.partner.button_open_success_stories()
         self.assertEqual(
             action_dict.get('res_model'), 'res.partner.success_story')

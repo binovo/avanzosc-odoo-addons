@@ -37,16 +37,17 @@ class ResPartnerSuccessStory(models.Model):
         comodel_name='res.partner.success_story.profit',
         inverse_name='story_id', string='Profits')
     cost = fields.Selection(
-        selection=[(1, '< 20.000'),
-                   (2, '20.000 - 50.000'),
-                   (3, '50.000 - 100.000'),
-                   (4, '100.000 - 250.000'),
-                   (5, '> 250.000')], string='Cost of the Solution')
+        selection=[('1', '< 20.000'),
+                   ('2', '20.000 - 50.000'),
+                   ('3', '50.000 - 100.000'),
+                   ('4', '100.000 - 250.000'),
+                   ('5', '> 250.000')], string='Cost of the Solution')
+
     customer_size = fields.Selection(
-        selection=[(1, '< 500.000'),
-                   (2, '500.000 - 1.000.000'),
-                   (3, '1.000.000 - 5.000.000'),
-                   (4, '> 5.000.000')], string='Customer Size')
+        selection=[('1', '< 500.000'),
+                   ('2', '500.000 - 1.000.000'),
+                   ('3', '1.000.000 - 5.000.000'),
+                   ('4', '> 5.000.000')], string='Customer Size')
 
 
 class ResPartnerSuccessStoryProfit(models.Model):
