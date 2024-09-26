@@ -140,13 +140,13 @@ msgstr "Publicar en"
 #. module: mass_mailing_characterization
 #: model:ir.model.fields,field_description:mass_mailing_characterization.field_mailing_mailing__post_state
 msgid "Post state"
-msgstr ""
+msgstr "Estado de la noticia"
 
 #. module: mass_mailing_characterization
 #: model:ir.model.fields,field_description:mass_mailing_characterization.field_mailing_mailing__post_line_ids
 #: model_terms:ir.ui.view,arch_db:mass_mailing_characterization.view_mail_mass_mailing_form
 msgid "Posts"
-msgstr "Estado del puesto"
+msgstr "Noticias"
 
 #. module: mass_mailing_characterization
 #: model:ir.model.fields,field_description:mass_mailing_characterization.field_mailing_mailing_post_line__sequence

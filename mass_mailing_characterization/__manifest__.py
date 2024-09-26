@@ -3,7 +3,7 @@
 
 {
     "name": "Mass Mailing Characterization",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.1.0",
     "category": "Marketing",
     "license": "AGPL-3",
     "author": "Trey (www.trey.es)",
