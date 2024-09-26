@@ -6,7 +6,12 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='body_arch']" position="before">
                 <group string="Featured Posts">
-                    <field name="featured_post_ids" nolabel="1" colspan="2"/>
+                    <field name="featured_post_ids" nolabel="1" colspan="2">
+                        <tree noupdate="1">
+                            <field name="area_ids" widget="many2many_tags"/>
+                            <field name="name"/>
+                        </tree>
+                    </field>
                 </group>
                 <group string="Posts">
                     <group class="mb32">
