@@ -4,7 +4,7 @@
 
 {
     "name": "Partner Characterization",
-    "version": "16.0.1.0.0",
+    "version": "16.0.2.0.0",
     "category": "Customers, Vendors, Partners,...",
     "license": "AGPL-3",
     "author": "AvanzOSC",
@@ -14,10 +14,12 @@
         "base_characterization",
     ],
     "data": [
+        "data/res_partner_data.xml",
         "security/ir.model.access.csv",
         "views/partner_view.xml",
         "views/partner_characterization_view.xml",
         "views/res_partner_economic_data_view.xml",
+        "views/res_partner_general_data_view.xml",
     ],
     "installable": True,
 }

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-01 15:26+0000\n"
-"PO-Revision-Date: 2024-08-01 15:26+0000\n"
+"POT-Creation-Date: 2024-11-04 12:42+0000\n"
+"PO-Revision-Date: 2024-11-04 12:42+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -64,9 +64,10 @@ msgid "Assembly"
 msgstr "Asamblea"
 
 #. module: partner_characterization
-#: model:ir.model.fields.selection,name:partner_characterization.selection__res_partner__associated_type__partner
-msgid "Associate"
-msgstr "Socio"
+#: model:ir.model,name:partner_characterization.model_associated_partner_type
+#: model:ir.model.fields,field_description:partner_characterization.field_associated_partner_type__name
+msgid "Associate Type"
+msgstr "Tipo asociado"
 
 #. module: partner_characterization
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner__associated
@@ -75,10 +76,10 @@ msgid "Associated"
 msgstr "Asociado"
 
 #. module: partner_characterization
-#: model:ir.model.fields,field_description:partner_characterization.field_res_partner__associated_type
-#: model:ir.model.fields,field_description:partner_characterization.field_res_users__associated_type
+#: model:ir.model.fields,field_description:partner_characterization.field_res_partner__associated_type_id
+#: model:ir.model.fields,field_description:partner_characterization.field_res_users__associated_type_id
 msgid "Associated Type"
-msgstr "Tipo de asociado"
+msgstr "Tipo asociado"
 
 #. module: partner_characterization
 #: model:ir.model.fields.selection,name:partner_characterization.selection__res_partner__associated__potential
@@ -127,11 +128,6 @@ msgid "Committees"
 msgstr "Comités"
 
 #. module: partner_characterization
-#: model:ir.model.fields.selection,name:partner_characterization.selection__res_partner__entity_character__company
-msgid "Company"
-msgstr "Compañía"
-
-#. module: partner_characterization
 #: model:ir.model,name:partner_characterization.model_res_partner
 msgid "Contact"
 msgstr "Contacto"
@@ -142,16 +138,22 @@ msgid "Countries with business interest"
 msgstr "Países con interés comercial"
 
 #. module: partner_characterization
+#: model:ir.model.fields,field_description:partner_characterization.field_associated_partner_type__create_uid
+#: model:ir.model.fields,field_description:partner_characterization.field_entity_partner_character__create_uid
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner_economic_data__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: partner_characterization
+#: model:ir.model.fields,field_description:partner_characterization.field_associated_partner_type__create_date
+#: model:ir.model.fields,field_description:partner_characterization.field_entity_partner_character__create_date
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner_economic_data__create_date
 msgid "Created on"
 msgstr "Creado en"
 
 #. module: partner_characterization
+#: model:ir.model.fields,field_description:partner_characterization.field_associated_partner_type__display_name
+#: model:ir.model.fields,field_description:partner_characterization.field_entity_partner_character__display_name
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner_economic_data__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
@@ -189,9 +191,15 @@ msgid "Economic Data from Partner"
 msgstr "Datos económicos de empresa"
 
 #. module: partner_characterization
-#: model:ir.model.fields,field_description:partner_characterization.field_res_partner__entity_character
-#: model:ir.model.fields,field_description:partner_characterization.field_res_users__entity_character
+#: model:ir.model.fields,field_description:partner_characterization.field_res_partner__entity_character_id
+#: model:ir.model.fields,field_description:partner_characterization.field_res_users__entity_character_id
 msgid "Entity Character"
+msgstr "Carácter de la entidad"
+
+#. module: partner_characterization
+#: model:ir.model,name:partner_characterization.model_entity_partner_character
+#: model:ir.model.fields,field_description:partner_characterization.field_entity_partner_character__name
+msgid "Entity Nature"
 msgstr "Naturaleza de la entidad"
 
 #. module: partner_characterization
@@ -241,6 +249,11 @@ msgid "Foundation Year"
 msgstr "Año de fundación"
 
 #. module: partner_characterization
+#: model:ir.ui.menu,name:partner_characterization.menu_config_general_data
+msgid "General Data"
+msgstr "Datos Generales"
+
+#. module: partner_characterization
 #: model_terms:ir.ui.view,arch_db:partner_characterization.partner_form_view_inh_res_partner
 msgid "General data"
 msgstr "Datos generales"
@@ -257,6 +270,8 @@ msgid "Group of control"
 msgstr "Grupo de control"
 
 #. module: partner_characterization
+#: model:ir.model.fields,field_description:partner_characterization.field_associated_partner_type__id
+#: model:ir.model.fields,field_description:partner_characterization.field_entity_partner_character__id
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner_economic_data__id
 msgid "ID"
 msgstr "ID"
@@ -281,16 +296,22 @@ msgid "Joint"
 msgstr "Coyuntura"
 
 #. module: partner_characterization
+#: model:ir.model.fields,field_description:partner_characterization.field_associated_partner_type____last_update
+#: model:ir.model.fields,field_description:partner_characterization.field_entity_partner_character____last_update
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner_economic_data____last_update
 msgid "Last Modified on"
 msgstr "Última modificación en"
 
 #. module: partner_characterization
+#: model:ir.model.fields,field_description:partner_characterization.field_associated_partner_type__write_uid
+#: model:ir.model.fields,field_description:partner_characterization.field_entity_partner_character__write_uid
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner_economic_data__write_uid
 msgid "Last Updated by"
 msgstr "Última actualización por"
 
 #. module: partner_characterization
+#: model:ir.model.fields,field_description:partner_characterization.field_associated_partner_type__write_date
+#: model:ir.model.fields,field_description:partner_characterization.field_entity_partner_character__write_date
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner_economic_data__write_date
 msgid "Last Updated on"
 msgstr "Última actualización en"
@@ -301,6 +322,12 @@ msgstr "Última actualización en"
 #: model_terms:ir.ui.view,arch_db:partner_characterization.res_partner_characterization_view_search
 msgid "Main Contact"
 msgstr "Contacto principal"
+
+#. module: partner_characterization
+#: model:ir.actions.act_window,name:partner_characterization.action_res_partner_entity_nature
+#: model:ir.ui.menu,name:partner_characterization.menu_res_partner_entity_nature
+msgid "Nature of the Entity"
+msgstr "Naturaleza de la Entidad"
 
 #. module: partner_characterization
 #: model_terms:ir.ui.view,arch_db:partner_characterization.partner_form_view_inh_res_partner
@@ -315,7 +342,7 @@ msgstr "Receptores boletín"
 #. module: partner_characterization
 #: model:ir.model.fields.selection,name:partner_characterization.selection__res_partner__associated__no
 msgid "No"
-msgstr "No"
+msgstr ""
 
 #. module: partner_characterization
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner__number_of_employees
@@ -324,20 +351,10 @@ msgid "Number of employees"
 msgstr "Número de empleados"
 
 #. module: partner_characterization
-#: model:ir.model.fields.selection,name:partner_characterization.selection__res_partner__entity_character__organism
-msgid "Organism"
-msgstr "Organización"
-
-#. module: partner_characterization
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner_economic_data__partner_id
 #: model_terms:ir.ui.view,arch_db:partner_characterization.res_partner_economic_data_view_search
 msgid "Partner"
 msgstr "Empresa"
-
-#. module: partner_characterization
-#: model:ir.model.fields.selection,name:partner_characterization.selection__res_partner__associated_type__junior
-msgid "Partner/Junior"
-msgstr "Socio junior"
 
 #. module: partner_characterization
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner__productive_imp_ids
@@ -349,7 +366,7 @@ msgstr "Implantación productiva"
 #. module: partner_characterization
 #: model_terms:ir.ui.view,arch_db:partner_characterization.res_partner_economic_data_view_form
 msgid "Real"
-msgstr "Real"
+msgstr ""
 
 #. module: partner_characterization
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner__real_external_billing
@@ -387,11 +404,6 @@ msgid "Real total turnover"
 msgstr "Facturación total real"
 
 #. module: partner_characterization
-#: model:ir.model.fields.selection,name:partner_characterization.selection__res_partner__entity_character__research_center
-msgid "Research center"
-msgstr "Centro de investigación"
-
-#. module: partner_characterization
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner__sme_business
 #: model:ir.model.fields,field_description:partner_characterization.field_res_users__sme_business
 msgid "SME"
@@ -409,16 +421,6 @@ msgstr "Naturaleza del sector"
 #: model_terms:ir.ui.view,arch_db:partner_characterization.partner_form_view_inh_res_partner
 msgid "Specializations"
 msgstr "Especializaciones"
-
-#. module: partner_characterization
-#: model:ir.model.fields.selection,name:partner_characterization.selection__res_partner__associated_type__strategic
-msgid "Strategic Partner"
-msgstr "Colaborador estratégico"
-
-#. module: partner_characterization
-#: model:ir.model.fields.selection,name:partner_characterization.selection__res_partner__associated_type__strategic_junior
-msgid "Strategic Partner Junior"
-msgstr "Colaborador usuario"
 
 #. module: partner_characterization
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner__structure_ids
@@ -445,9 +447,10 @@ msgid "Teams"
 msgstr "Equipos"
 
 #. module: partner_characterization
-#: model:ir.model.fields.selection,name:partner_characterization.selection__res_partner__entity_character__training_center
-msgid "Training center"
-msgstr "Centro de formación"
+#: model:ir.actions.act_window,name:partner_characterization.action_res_partner_associate_type
+#: model:ir.ui.menu,name:partner_characterization.menu_res_partner_associate_type
+msgid "Type of Associate"
+msgstr "Tipo de Asociado"
 
 #. module: partner_characterization
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner__unsubscription_date

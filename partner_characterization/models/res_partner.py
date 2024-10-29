@@ -38,28 +38,19 @@ class ResPartner(models.Model):
         ],
         default="no",
     )
-    associated_type = fields.Selection(
-        selection=[
-            ("partner", "Associate"),
-            ("junior", "Partner/Junior"),
-            ("strategic", "Strategic Partner"),
-            ("strategic_junior", "Strategic Partner Junior"),
-        ],
-        default="partner",
-    )
-    entity_character = fields.Selection(
-        selection=[
-            ("company", "Company"),
-            ("training_center", "Training center"),
-            ("research_center", "Research center"),
-            ("organism", "Organism"),
-        ],
-        default="company",
-    )
     sme_business = fields.Boolean(
         default=True,
         string="SME",
     )
+    associated_type_id = fields.Many2one(
+        comodel_name='associated.partner.type',
+        string='Associated Type'
+    )
+    entity_character_id = fields.Many2one(
+        comodel_name='entity.partner.character',
+        string='Entity Character'
+    )
+    sme_business = fields.Boolean(default=True, string='SME')
     sector_character = fields.Many2one(
         comodel_name="res.character",
     )
@@ -243,3 +234,16 @@ class ResPartnerEconomicdata(models.Model):
                 (data.id, "[{}] {}".format(economic_date.year, data.partner_id.name))
             )
         return res
+
+class ResPartnerAssociateType(models.Model):
+    _name = 'associated.partner.type'
+    _description = 'Associate Type'
+
+    name = fields.Char(string='Associate Type', required=True)
+
+
+class ResPartnerEntityNature(models.Model):
+    _name = 'entity.partner.character'
+    _description = 'Entity Nature'
+
+    name = fields.Char(string='Entity Nature', required=True)

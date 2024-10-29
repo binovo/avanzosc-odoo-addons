@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!-- Valores para Tipo de Asociado -->
+    <record id="associate_type_partner" model="associated.partner.type">
+        <field name="name">Partner</field>
+    </record>
+    <record id="associate_type_junior_partner" model="associated.partner.type">
+        <field name="name">Junior partner</field>
+    </record>
+    <record id="associate_type_strategic_partner" model="associated.partner.type">
+        <field name="name">Strategic partner</field>
+    </record>
+    <record id="associate_type_user_partner" model="associated.partner.type">
+        <field name="name">User partner</field>
+    </record>
+
+    <!-- Valores para Naturaleza de la Entidad -->
+    <record id="entity_nature_company" model="entity.partner.character">
+        <field name="name">Company</field>
+    </record>
+    <record id="entity_nature_training_centre" model="entity.partner.character">
+        <field name="name">Training centre</field>
+    </record>
+    <record id="entity_nature_research_centre" model="entity.partner.character">
+        <field name="name">Research centre</field>
+    </record>
+    <record id="entity_nature_organisation" model="entity.partner.character">
+        <field name="name">Organisation</field>
+    </record>
+</odoo>

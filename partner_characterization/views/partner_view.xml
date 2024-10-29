@@ -37,9 +37,9 @@
                     <group>
                         <group name="company_type">
                             <field name="associated" />
-                            <field name="associated_type" />
+                            <field name="associated_type_id" />
                             <field name="group_of_control" />
-                            <field name="entity_character" />
+                            <field name="entity_character_id" />
                             <field name="foundation_year" />
                             <field name="incorporate_user_id" />
                             <field name="interlocutor_user_id" />
