@@ -4,10 +4,10 @@
 from odoo.tests import common
 
 
-class TestBaseCharacterization(common.SavepointCase):
+class TestBaseCharacterization(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(TestBaseCharacterization, cls).setUpClass()
+        super().setUpClass()
         cls.area_model = cls.env["res.area"]
         cls.type_model = cls.env["res.area.type"]
 
