@@ -52,17 +52,19 @@ class MassMailing(models.Model):
         new.action_post_state_done()
         return new
 
-    @api.model
-    def create(self, vals):
-        record = super().create(vals)
-        record.action_post_state_draft()
-        record.action_post_state_done()
-        return record
+    @api.model_create_multi
+    def create(self, vals_list):
+        records = super().create(vals_list)
+        for values, record in zip(vals_list, records):
+            record.action_post_state_draft()
+            record.action_post_state_done()
+        return records
 
 
 class MassMailingPostLine(models.Model):
     _name = "mailing.mailing.post_line"
     _order = "sequence asc"
+    _description = "Mailing post line"
 
     sequence = fields.Integer(string="Sequence")
     post_id = fields.Many2one(comodel_name="blog.post", string="Post")

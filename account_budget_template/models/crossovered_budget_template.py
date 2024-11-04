@@ -42,10 +42,11 @@ class CrossoveredBudgetTemplate(models.Model):
                 _("The budget template must have at least one budgetary" " position.")
             )
 
-    @api.model
-    def create(self, vals):
-        self._check_budget_post_ids(vals)
-        return super(CrossoveredBudgetTemplate, self).create(vals)
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            self._check_budget_post_ids(vals)
+        return super(CrossoveredBudgetTemplate, self).create(vals_list)
 
     def write(self, vals):
         self._check_budget_post_ids(vals)
