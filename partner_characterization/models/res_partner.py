@@ -235,15 +235,16 @@ class ResPartnerEconomicdata(models.Model):
             )
         return res
 
+
 class ResPartnerAssociateType(models.Model):
     _name = 'associated.partner.type'
     _description = 'Associate Type'
 
-    name = fields.Char(string='Associate Type', required=True)
+    name = fields.Char(string='Associate Type', required=True, translate=True)
 
 
 class ResPartnerEntityNature(models.Model):
     _name = 'entity.partner.character'
     _description = 'Entity Nature'
 
-    name = fields.Char(string='Entity Nature', required=True)
+    name = fields.Char(string='Entity Nature', required=True, translate=True)

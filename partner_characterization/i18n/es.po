@@ -194,7 +194,7 @@ msgstr "Datos económicos de empresa"
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner__entity_character_id
 #: model:ir.model.fields,field_description:partner_characterization.field_res_users__entity_character_id
 msgid "Entity Character"
-msgstr "Carácter de la entidad"
+msgstr "Naturaleza de la entidad"
 
 #. module: partner_characterization
 #: model:ir.model,name:partner_characterization.model_entity_partner_character
@@ -351,6 +351,7 @@ msgid "Number of employees"
 msgstr "Número de empleados"
 
 #. module: partner_characterization
+#: model:associated.partner.type,name:partner_characterization.associate_type_partner
 #: model:ir.model.fields,field_description:partner_characterization.field_res_partner_economic_data__partner_id
 #: model_terms:ir.ui.view,arch_db:partner_characterization.res_partner_economic_data_view_search
 msgid "Partner"
@@ -462,3 +463,44 @@ msgstr "Fecha de baja"
 #: model:ir.model.fields.selection,name:partner_characterization.selection__res_partner__associated__yes
 msgid "Yes"
 msgstr "Sí"
+
+#. module: partner_characterization
+#: model:entity.partner.character,name:partner_characterization.entity_nature_company
+msgid "Company"
+msgstr "Compañía"
+
+#. module: partner_characterization
+#: model:entity.partner.character,name:partner_characterization.entity_nature_training_centre
+msgid "Training centre"
+msgstr "Centro de formación"
+
+#. module: partner_characterization
+#: model:entity.partner.character,name:partner_characterization.entity_nature_research_centre
+msgid "Research centre"
+msgstr "Centro de investigación"
+
+#. module: partner_characterization
+#: model:entity.partner.character,name:partner_characterization.entity_nature_organisation
+msgid "Organisation"
+msgstr "Organización"
+
+#. module: partner_characterization
+#: model:associated.partner.type,name:partner_characterization.associate_type_partner
+msgid "Partner"
+msgstr "Socio"
+
+#. module: partner_characterization
+#: model:associated.partner.type,name:partner_characterization.associate_type_junior_partner
+msgid "Junior partner"
+msgstr "Socio junior"
+
+#. module: partner_characterization
+#: model:associated.partner.type,name:partner_characterization.associate_type_strategic_partner
+msgid "Strategic partner"
+msgstr "Colaborador estratégico"
+
+#. module: partner_characterization
+#: model:associated.partner.type,name:partner_characterization.associate_type_user_partner
+msgid "User partner"
+msgstr "Colaborador usuario"
+
