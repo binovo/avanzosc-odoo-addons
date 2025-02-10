@@ -4,7 +4,7 @@
         <field name="model">mailing.mailing</field>
         <field name="inherit_id" ref="mass_mailing.mailing_mailing_view_form_full_width"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='body_arch']" position="before">
+            <xpath expr="//field[@name='body_arch']/../.." position="before">
                 <group string="Featured Posts">
                     <field name="featured_post_ids" nolabel="1" colspan="2">
                         <tree noupdate="1">

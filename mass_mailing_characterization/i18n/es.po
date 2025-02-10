@@ -18,7 +18,7 @@ msgstr ""
 #. module: mass_mailing_characterization
 #: model_terms:ir.ui.view,arch_db:mass_mailing_characterization.view_mail_mass_mailing_form
 msgid "Add posts mode"
-msgstr "Añadir modo posts"
+msgstr "Modo ordenación"
 
 #. module: mass_mailing_characterization
 #: model:ir.model.fields,field_description:mass_mailing_characterization.field_mailing_mailing_post_line__area_ids
@@ -124,7 +124,7 @@ msgstr "Envío no incluido"
 #. module: mass_mailing_characterization
 #: model_terms:ir.ui.view,arch_db:mass_mailing_characterization.view_mail_mass_mailing_form
 msgid "Order mode"
-msgstr "Modo de pedido"
+msgstr "Modo insertar noticias"
 
 #. module: mass_mailing_characterization
 #: model:ir.model,name:mass_mailing_characterization.model_res_partner_area
