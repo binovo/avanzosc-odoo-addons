@@ -1,5 +1,5 @@
 # Copyright 2025 Alfredo de la Fuente - AvanzOSC
-# License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 from odoo import models
 
 
@@ -8,19 +8,17 @@ class StockMoveLine(models.Model):
 
     def _get_aggregated_product_quantities(self, **kwargs):
         result = super()._get_aggregated_product_quantities(**kwargs)
-        out_picking_lines = self.filtered(lambda x: x.picking_code == "outgoing")
-        if not result or len(self) != len(out_picking_lines):
+        picking_lines = self
+        if not result or len(self) != len(picking_lines):
             return result
         for clave in result.keys():
-            for move_line in self:
+            for move_line in self.filtered(
+                lambda x: x.move_id and x.move_id.sale_line_id
+            ):
                 line_key = move_line._generate_key_to_found()
-                product_customer_code = ""
-                if move_line.move_id.sale_line_id:
-                    product_customer_code = (
-                        move_line.move_id.sale_line_id.product_customer_code
-                    )
-                if line_key == clave:
-                    result[line_key]["product_customer_code"] = product_customer_code
+                if line_key in clave:
+                    result[clave]["name"] = move_line.move_id.sale_line_id.name
+                    result[clave]["description"] = ""
         return result
 
     def _generate_key_to_found(self):
