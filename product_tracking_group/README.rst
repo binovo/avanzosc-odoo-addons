@@ -2,12 +2,12 @@
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 
-==============================
-Stock picking box label report
-==============================
+======================
+Product tracking group
+======================
 
-* In stock picking new action "Print Box Labels".
-* In stock picking new report "Picking All Box Labels".
+* New group "Product Traceability Manager" to modify product tracking.
+
 
 Bug Tracker
 ===========
