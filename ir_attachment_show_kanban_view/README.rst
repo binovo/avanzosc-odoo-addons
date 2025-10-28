@@ -1,17 +1,12 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
-   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
-   :alt: License: AGPL-3
+    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+    :alt: License: AGPL-3
 
-============================
-Product brand supplierinfo 1
-============================
+==============================
+Ir attachment show kanban view
+==============================
 
-* In "Product Brand" new field "Code".
-* New objects "Brand Products Footprint" and "Brand Products".
-* In "Supplier Pricelist" new fields "Brand Product, "Brand", and "Brand Code".
-* New group "Brands Manager" for "Product Brand", "Brand Products Footprint"
-  and "Brand Products"
-
+* Magnifying glass to open the attachment in the "ir.attachment" "kanban" view.
 
 Bug Tracker
 ===========
